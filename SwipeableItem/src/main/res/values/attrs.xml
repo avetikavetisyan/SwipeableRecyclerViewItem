@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeableItem">
+        <attr name="foreground_view" format="reference" />
+        <attr name="background_view" format="reference" />
+        <attr name="border_color" format="reference" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="open_over_shoot" format="boolean" />
+        <attr name="close_after_scroll" format="boolean" />
+        <attr name="remove_radius_after_move" format="boolean" />
+        <attr name="border_width" format="dimension" />
+        <attr name="foreground_view_elevation" format="dimension" />
+        <attr name="open_value" format="float" />
+        <attr name="close_duration" format="integer" />
+        <attr name="swipe_direction" format="enum">
+            <enum name="ToEnd" value="0"/>
+            <enum name="ToStart" value="1"/>
+            <enum name="Both" value="2"/>
+        </attr>
+        <attr name="animation_type" format="enum">
+            <enum name="Open" value="0"/>
+            <enum name="Move" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.swipeableitem.SwipeableItem
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:foreground_view="@layout/foreground_view"
+    app:background_view="@layout/background_view"
+    app:open_over_shoot="false"
+    app:close_after_scroll="true"
+    app:remove_radius_after_move="false"
+    app:corner_radius="10dp"
+    app:border_width="2dp"
+    app:open_value="0.35"
+    app:border_color="@color/grey_dark"
+    app:close_duration="200"
+    app:swipe_direction="Both"
+    app:animation_type="Open"
+    app:foreground_view_elevation="50dp"/>
