@@ -181,7 +181,7 @@ class SwipeableItem(context: Context, attrs: AttributeSet? = null) : FrameLayout
                         touchDirection =
                             if (abs(event.rawX - startX) > abs((event.rawY - startY))) {
                                 if (parent is RecyclerView) {
-                                    (parent as RecyclerView).isLayoutFrozen = true
+                                    (parent as RecyclerView).suppressLayout(true)
                                 }
                                 TouchDirection.Horizontal
                             } else {
@@ -198,7 +198,7 @@ class SwipeableItem(context: Context, attrs: AttributeSet? = null) : FrameLayout
             MotionEvent.ACTION_UP -> {
                 needRadius = true
                 if (view?.parent is RecyclerView) {
-                    (parent as RecyclerView).isLayoutFrozen = false
+                    (parent as RecyclerView).suppressLayout(false)
                 }
                 if (touchDirection == TouchDirection.Horizontal) {
                     close(event)
@@ -211,7 +211,7 @@ class SwipeableItem(context: Context, attrs: AttributeSet? = null) : FrameLayout
             else -> {
                 needRadius = true
                 if (view?.parent is RecyclerView) {
-                    (parent as RecyclerView).isLayoutFrozen = false
+                    (parent as RecyclerView).suppressLayout(false)
                 }
                 if (touchDirection == TouchDirection.Horizontal) {
                     close(event)
